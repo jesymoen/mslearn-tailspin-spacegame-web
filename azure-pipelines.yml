@@ -1,3 +1,8 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
 trigger:
   - '*'
   
@@ -28,7 +33,7 @@ trigger:
     displayName: 'Run gulp tasks'
   
   - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
-    displayName: 'Write build info'git
+    displayName: 'Write build info'
     workingDirectory: Tailspin.SpaceGame.Web/wwwroot
   
   - task: DotNetCoreCLI@2
